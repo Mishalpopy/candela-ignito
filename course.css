@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+}
+body {
+  background: ghostwhite;
+}
+.courses {
+  border-bottom-left-radius: 127px;
+}
+.courses .container {
+  padding: 21px 21px;
+}
+.courses h2 {
+  margin: 100px auto;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  max-width: 680px;
+  font-size: 50px;
+  position: relative;
+}
+.courses h1 {
+  margin: 100px auto;
+  text-align: center;
+  font-size: 40px;
+  max-width: 300px;
+  margin-top: 16px;
+  color: #f57c21;
+  font-size: 25px;
+  position: relative;
+}
+
+.courses h1::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #f57c21;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: -2;
+}
+
+.courses h1::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #f57c21;
+  position: absolute;
+  right: 0;
+  top: 60%;
+}
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+.cards .card {
+  padding: 27px 24px;
+  width: 300px;
+  border: 0px !important;
+  min-height: 313px;
+  display: flex;
+  background-color: ghostwhite;
+  justify-content: space-between;
+  box-shadow: 10px 10px 10px 0px rgb(0 0 0 / 5%),
+    -10px -10px 10px 0px rgb(255 255 255 / 72%);
+  border-top-right-radius: 40px;
+  min-height: 35vh;
+  transition: 0.5s;
+  border-bottom-left-radius: 40px;
+  /* border-bottom-right-radius: 40px; */
+}
+
+.cards .card:hover {
+  transform: translateY(-5px);
+}
+.cards .card h2 {
+  margin: 0;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 40px;
+  max-width: 680px;
+  font-size: 50px;
+  position: relative;
+  text-align: left;
+}
+.plus {
+  position: relative;
+  left: 8px;
+  border: 1px dotted white;
+  width: 3px;
+  height: 3px;
+  background-color: black;
+  box-sizing: border-box;
+  transform: scale(4);
+}
+.cards .card .box {
+  padding: 6px;
+  background: white;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  display: flex;
+  border: 4px solid orange;
+}

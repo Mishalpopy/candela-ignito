@@ -1,0 +1,191 @@
+.program-out-come {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  justify-content: space-evenly;
+  flex-direction: column;
+  /* background-image: linear-gradient(
+    to right top,
+    #f26723,
+    #f36d22,
+    #f47321,
+    #f47920,
+    #f57f20
+  ); */
+}
+
+.program-out-come h1 {
+  color: #f26723;
+  font-size: 30px;
+  text-decoration-line: overline;
+}
+.program-out-come.container {
+  position: relative;
+}
+
+.program-out-come .container .card {
+  position: relative;
+  width: 246px;
+  height: 351px;
+  background: #0e2643;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.program-out-come .container .card p {
+  color: white;
+}
+.program-out-come .container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* circle style */
+.program-out-come .container .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f57f20;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+.program-out-come .container .card:hover::before {
+  clip-path: circle(300px at 80% -20%);
+}
+
+/* watermark */
+.program-out-come .container .card::after {
+  content: "#IGNITO";
+  position: absolute;
+  top: 85%;
+  left: 10%;
+  font-size: 3em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+}
+
+/* style product */
+.program-out-come .container .card .image-box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+.program-out-come .container .card:hover .image-box {
+  top: 0;
+  transform: translateY(0);
+}
+.program-out-come .container .card .image-box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-6deg);
+  width: 200px;
+}
+
+/* style product info */
+.program-out-come .container .card .content-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+.program-out-come .container .card:hover .content-box {
+  height: 210px;
+}
+.program-out-come .container .card .content-box h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.program-out-come .container .card .content-box .size,
+.program-out-come .container .card .content-box .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.program-out-come .container .card:hover .content-box .size {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.program-out-come .container .card:hover .content-box .color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+.program-out-come .container .card .content-box .size h3,
+.program-out-come .container .card .content-box .color h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.program-out-come .container .card .content-box .size span {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.program-out-come .container .card .content-box .size span:hover {
+  background: #9bdc28;
+}
+.program-out-come .container .card .content-box .color span {
+  width: 20px;
+  height: 20px;
+  background: #ff0;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.program-out-come .container .card .content-box .color span:nth-child(2) {
+  background: #9bdc28;
+}
+.program-out-come .container .card .content-box .color span:nth-child(3) {
+  background: #03a9f4;
+}
+.program-out-come .container .card .content-box .color span:nth-child(4) {
+  background: #e91e63;
+}
+.program-out-come .container .card .content-box a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+.program-out-come .container .card:hover .content-box a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+}
